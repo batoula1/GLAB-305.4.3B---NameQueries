@@ -32,10 +32,7 @@ VALUES ('24-10', 'NYC', 'Ceo', 'Tom Thele', 1, '25600', '2021-09-09 18:32:11.000
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="c93519a9-4b01-45b8-957b-bfcb115752e1" object-ref="consoles/@localhost" />
-      <object connection-id="c93519a9-4b01-45b8-957b-bfcb115752e1" object-ref="consoles/UserDb" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="c93519a9-4b01-45b8-957b-bfcb115752e1">

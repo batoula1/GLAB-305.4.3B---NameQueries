@@ -6,6 +6,26 @@ import java.util.Date;
 
 @Entity
 @Table
+
+@NamedQuery(name = "getAllEmployees", query = "select e from Employee e")
+
+@NamedQueries({
+        @NamedQuery(name = "getEmployeeById", query = "select e.name, e" +
+                ".salary, e.job from Employee e where id=:id"),
+        @NamedQuery(name = "getAllDepartments", query = "from Employee"),
+        @NamedQuery(name = "findEmployeeByName", query = "from Employee e " +
+                "where e.name=:name"),
+        @NamedQuery(name = "employeeDeptAlias", query = "select e, e" +
+                ".officeCode, e.name, " +
+                "CASE " +
+                "WHEN (e.officeCode = 1) THEN 'IT' "
+                + "WHEN (e.officeCode = 2) THEN 'Admin' "
+                + "WHEN (e.officeCode = 3) THEN 'HR' "
+                + "WHEN (e.officeCode = 4) THEN 'Developers' "
+                + "WHEN (e.officeCode = 5) THEN 'Accounts' "
+                + "WHEN (e.officeCode = 6) THEN 'Finance' "
+                + "ELSE 'General' END FROM Employee e"),
+})
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
